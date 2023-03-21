@@ -10,20 +10,25 @@ function moveLeft() {
   console.log(moveLeft);
 }
 
-//side note
-//getLocation button
 
-// navigator.geolocation.getCurrentPosition(function (locationData) {
-//   console.log(locationData);
-//   //made a request for the api to get current location of the user
-//   $.get(
-//     url +
-//       "&lat=" +
-//       locationData.coords.latitude +
-//       "&lon=" +
-//       locationData.coords.longitude
-//   );
-//   then(function (data) {
-//     console.log(data);
-//   });
-// });
+// get location
+//change url with baseURL
+
+var baseURL = 'https://api.openweathermap.org/data/2.5';
+var apiKey = '307f24d9af855edf4286e32464c76737';
+var url = baseURL + '/weather?appid=' + apiKey;
+
+navigator.geolocation.getCurrentPosition(function (locationData) {
+    console.log(locationData);
+    //made a request for the api to get current location of the user
+    $.get(
+        url +
+        "&lat=" +
+        locationData.coords.latitude +
+        "&lon=" +
+        locationData.coords.longitude
+    );
+    then(function (data) {
+        console.log(data);
+    });
+});
