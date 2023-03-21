@@ -6,39 +6,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Movie Map</title>
     <link rel="stylesheet" href="css/style.css" />
+    <!-- materialize cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
   </head>
   <body>
-
-      <header>
-
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">Search</a>
-            <a href="#">Watchlist</a>
-            <a href="#">Movies</a>
-        </nav>
-        
+    <header>
+      <!-- Main Header -->
+      <h1>Movie Map</h1>
+      <!-- Dropdown Genre List -->
+      <ul id="dropdown1" class="dropdown-content">
+        <li><a href="#!">Action</a></li>
+        <li><a href="#!">Comedy</a></li>
+        <li><a href="#!">Drama</a></li>
+        <li><a href="#!">Horror</a></li>
+        <li><a href="#!">Fantasy</a></li>
+        <li><a href="#!">Sci-Fi</a></li>
+      </ul>
+      <nav>
+        <div class="nav-wrapper blue darken-2">
+          <a href="#!" class="brand-logo"
+            >Chose a genre, get our recomendations!</a
+          >
+          <ul class="right hide-on-med-and-down">
+            <!-- Dropdown Trigger -->
+            <li>
+              <a class="dropdown-trigger" href="#!" data-target="dropdown1"
+                >Dropdown<i class="material-icons right">arrow_drop_down</i></a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
     </header>
 
+    <!-- Top Section ------- Movie Poster Links (Once Genre is picked, two movie posters appear to recommend) -->
     <section class="movie-ticker">
-        <button class="move-left-button"></button>
-        
-        <a href="#" class="john-wick-4-link">
-            <figure class="john-wick-4-poster">
-                <img src="assets/john-wick-4-poster.jpg">
-                <figcaption class="john-wick-4-caption">March 24th, 2023</figcaption>
-            </figure>
-        </a>
-    
+      <button class="move-left-button"></button>
+
+      <a href="#" class="genre-link">
+        <figure class="movie-poster">
+          <!-- <img src="assets/john-wick-4-poster.jpg" /> -->
+          <figcaption class="caption">fun fact here</figcaption>
+        </figure>
+      </a>
+
+      <a href="#" class="genre-link2">
+        <figure class="movie-poster2">
+          <!-- <img src="assets/john-wick-4-poster.jpg" /> -->
+          <figcaption class="caption2">fun fact here</figcaption>
+        </figure>
+      </a>
     </section>
 
-    <section class="movie-facts">
+    <section class="movie-facts"></section>
 
+    <!-- Bottom Section ------- Snack Map (Get user's location, List of Nearby Stores Appears) -->
+    <section>
+      <h2>SNACK MAP</h2>
+      <p>It's time to go grab your favorite snack! We're here to help.</p>
+
+      <button>Find a Store Near Me</button>
+
+      <!-- Store List -->
+      <ul>
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+        <li>Four</li>
+        <li>Five</li>
+      </ul>
     </section>
 
-    
-
-
+    <!-- FOOTER -->
+    <footer></footer>
+    <!-- jQuery cdn link -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.4.min.js"
+      integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+      crossorigin="anonymous"
+    ></script>
     <script src="js/script.js"></script>
   </body>
 </html>
