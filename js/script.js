@@ -9,31 +9,49 @@
 // Then they can choose one of those movie
 
 // When the user picks a movie
-// Then the movie is saved to local storage 
+// Then the movie is saved to local storage
 
-// Below the movie section 
+// Below the movie section
 // When the user will be able to check locations to buy snacks
 // and see how far they are from the location
-
 
 // get location
 //change url with baseURL
 
-var baseURL = 'https://api.openweathermap.org/data/2.5';
-var apiKey = '307f24d9af855edf4286e32464c76737';
-var url = baseURL + '/weather?appid=' + apiKey;
+var baseURL = "https://api.openweathermap.org/data/2.5";
+var apiKey = "307f24d9af855edf4286e32464c76737";
+var url = baseURL + "/weather?appid=" + apiKey;
 
 navigator.geolocation.getCurrentPosition(function (locationData) {
-    console.log(locationData);
-    //made a request for the api to get current location of the user
-    $.get(
-        url +
-        "&lat=" +
-        locationData.coords.latitude +
-        "&lon=" +
-        locationData.coords.longitude
-    );
-    then(function (data) {
-        console.log(data);
-    });
+  console.log(locationData);
+  //made a request for the api to get current location of the user
+  $.get(
+    url +
+      "&lat=" +
+      locationData.coords.latitude +
+      "&lon=" +
+      locationData.coords.longitude
+  );
+  then(function (data) {
+    console.log(data);
+  });
 });
+
+// ES6 VERSION OF CALLING API DATA
+
+// async function getData() {
+//     const data = await fetch(
+//       "https://api.themoviedb.org/3/movie/550?api_key=8624c76629e368c99110086d1bbb16d0"
+//     )
+//       .then((response) => response.json())
+//       .then((response) => {
+//         console.log(response);
+
+//         return response;
+//       })
+//       .catch((err) => console.error(err));
+
+//     console.log(data);
+//   }
+
+//   getData();
