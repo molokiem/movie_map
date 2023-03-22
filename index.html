@@ -13,114 +13,130 @@
     />
   </head>
   <body>
-
     <!-- 
     <button onclick="getLocation()">Test button if you guys want it</button>
      -->
-     <p id="test"></p>
-    
-     <script>
-        var x = document.getElementById("test");
-        
-        function getLocation() {
-          if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(showPosition, showError);
-          } else { 
-            x.innerHTML = "Movie Map is not supported by this browser.";
-          }
+    <p id="test"></p>
+
+    <!-- <script>
+      var x = document.getElementById("test");
+
+      function getLocation() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(showPosition, showError);
+        } else {
+          x.innerHTML = "Movie Map is not supported by this browser.";
         }
-        
-        function showPosition(position) {
-          x.innerHTML = "Latitude: " + position.coords.latitude + 
-          "<br>Longitude: " + position.coords.longitude;
+      }
+
+      function showPosition(position) {
+        x.innerHTML =
+          "Latitude: " +
+          position.coords.latitude +
+          "<br>Longitude: " +
+          position.coords.longitude;
+      }
+
+      function showError(error) {
+        switch (error.code) {
+          case error.PERMISSION_DENIED:
+            x.innerHTML = "User denied the request to see the location.";
+            break;
+          case error.POSITION_UNAVAILABLE:
+            x.innerHTML = "Location information is unavailable.";
+            break;
+          case error.TIMEOUT:
+            x.innerHTML = "The request for user location due totimed out.";
+            break;
+          case error.UNKNOWN_ERROR:
+            x.innerHTML = "Unknown error occurred.";
+            break;
         }
-        
-        function showError(error) {
-          switch(error.code) {
-            case error.PERMISSION_DENIED:
-              x.innerHTML = "User denied the request to see the location."
-              break;
-            case error.POSITION_UNAVAILABLE:
-              x.innerHTML = "Location information is unavailable."
-              break;
-            case error.TIMEOUT:
-              x.innerHTML = "The request for user location due totimed out."
-              break;
-            case error.UNKNOWN_ERROR:
-              x.innerHTML = "Unknown error occurred."
-              break;
-          }
-        }
-     </script>
-     
- 
+      }
+    </script> -->
 
     <header>
       <!-- Main Header -->
       <h1>Movie Map</h1>
-      <h2>Bringing: "Focus, Commitment, And Sheer Will" -Viggo Tarasov On John Wick</h2>
+      <h2>
+        Bringing: "Focus, Commitment, And Sheer Will" -Viggo Tarasov On John
+        Wick
+      </h2>
       <h3>To A Theater Near You</h3>
       <!-- Dropdown Genre List -->
 
-
-        <!-- Dropdown Structure -->
-        <ul id="dropdown1" class="dropdown-content">
-          <li><a href="#!">Horror</a></li>
-          <li><a href="#!">Action</a></li>
-          <li><a href="#!">Comedy</a></li>
-          <li class="divider"></li>
-          <li><a href="#!">Fantasy</a></li>
-          <li><a href="#!">Drama</a></li>
-          <li><a href="#!">Sci-Fi</a></li>
-
-        </ul>
-        <nav>
-          <div class="nav-wrapper blue dark 1">
-            <a href="#!" class="brand-logo">Choose a genre, get our recommendations!</a>
-            <ul class="right hide-on-med-and-down">
-              <!-- Dropdown Trigger -->
-              <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Dropdown<i class="material-icons right"></i></a></li>
-            </ul>
-          </div>
-        </nav>
+      <!-- Dropdown Structure -->
+      <ul id="dropdown1" class="dropdown-content">
+        <li><a href="#!">Horror</a></li>
+        <li><a href="#!">Action</a></li>
+        <li><a href="#!">Comedy</a></li>
+        <li class="divider"></li>
+        <li><a href="#!">Fantasy</a></li>
+        <li><a href="#!">Drama</a></li>
+        <li><a href="#!">Sci-Fi</a></li>
+      </ul>
+      <nav>
+        <div class="nav-wrapper blue dark 1">
+          <a href="#!" class="brand-logo"
+            >Choose a genre, get our recommendations!</a
+          >
+          <ul class="right hide-on-med-and-down">
+            <!-- Dropdown Trigger -->
+            <li>
+              <a class="dropdown-trigger" href="#!" data-target="dropdown1"
+                >Dropdown<i class="material-icons right"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </header>
 
-    <!-- Top Section ------- Movie Poster Links (Once Genre is picked, two movie posters appear to recommend) -->
-    
+    <!-- Top Section ------- Movie Poster Links (Once Genre is picked, two movie posters appear to recommend) -->git
+
     <div class="container">
       <section class="movie-ticker">
-
         <a href="#" id="movie-1" class="movie-link">
           <figure id="genre-1" class="movie-poster">
-            <img id="movie-poster-1" src="assets/john-wick-4-poster.jpg">
+            <img id="movie-poster-1" src="assets/john-wick-4-poster.jpg" />
             <figcaption class="caption">placeholder</figcaption>
           </figure>
         </a>
 
         <a href="#" id="movie-2" class="movie-link2">
           <figure id="genre-2" class="movie-poster2">
-            <img id="movie-poster-2" src="assets/the-mandalorian-season-3-poster.jpeg"/>
+            <img
+              id="movie-poster-2"
+              src="assets/the-mandalorian-season-3-poster.jpeg"
+            />
             <figcaption class="caption">Placeholder</figcaption>
           </figure>
         </a>
 
         <a href="#" id="movie-3" class="movie-link3">
           <figure id="genre-3" class="movie-poster3">
-            <img id="movie-poster-3" src="assets/vinland-saga-season-2-poster.jpg"/>
-            <figcaption class="caption">"I don't hate him anymore, which is my problem, whithout my hate, I'm empty."-Thorfinn</figcaption>
+            <img
+              id="movie-poster-3"
+              src="assets/vinland-saga-season-2-poster.jpg"
+            />
+            <figcaption class="caption">
+              "I don't hate him anymore, which is my problem, whithout my hate,
+              I'm empty."-Thorfinn
+            </figcaption>
           </figure>
         </a>
       </section>
     </div>
-
-
 
     <section class="movie-facts"></section>
 
     <!-- Bottom Section ------- Snack Map (Get user's location, List of Nearby Stores Appears) -->
     <section class="snack-map">
       <h2>SNACK MAP</h2>
-      <p>"Being a mandalorian isn't just about fighting, you also have to know how to navigate the galaxy, that way you'll never be lost." -Din Djarin</p>
+      <p>
+        "Being a mandalorian isn't just about fighting, you also have to know
+        how to navigate the galaxy, that way you'll never be lost." -Din Djarin
+      </p>
       <p>It's time to go grab your favorite snack! We're here to help.</p>
     </section>
 
@@ -129,35 +145,25 @@
 
       <!-- Store List -->
       <ul>
-        <li>One</li>
-        <li>Two</li>
-        <li>Three</li>
-        <li>Four</li>
-        <li>Five</li>
+        <li class="data">One</li>
+        <li class="data">Two</li>
+        <li class="data">Three</li>
+        <li class="data">Four</li>
+        <li class="data">Five</li>
       </ul>
     </section>
 
-
-      <!-- FOOTER -->
-     <footer></footer>
+    <!-- FOOTER -->
+    <footer></footer>
 
     <!-- jQuery cdn link -->
-    
+
     <script
-    src="https://code.jquery.com/jquery-3.6.4.min.js"
-    integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
-    crossorigin="anonymous"
+      src="https://code.jquery.com/jquery-3.6.4.min.js"
+      integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+      crossorigin="anonymous"
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="js/script.js"></script>
-    
-    
-     
-
   </body>
-
-
-
-
-
 </html>
