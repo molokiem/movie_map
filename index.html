@@ -64,53 +64,61 @@
       </h2>
       <h3>To A Theater Near You</h3>
       <!-- Dropdown Genre List -->
+
+      <!-- Dropdown Structure -->
       <ul id="dropdown1" class="dropdown-content">
+        <li><a href="#!">Horror</a></li>
         <li><a href="#!">Action</a></li>
         <li><a href="#!">Comedy</a></li>
-        <li><a href="#!">Drama</a></li>
-        <li><a href="#!">Horror</a></li>
+        <li class="divider"></li>
         <li><a href="#!">Fantasy</a></li>
+        <li><a href="#!">Drama</a></li>
         <li><a href="#!">Sci-Fi</a></li>
       </ul>
-      <!-- nav bar -->
       <nav>
-        <div class="nav-wrapper blue darken-2">
-          <a href="#!" class="brand-logo left"
-            >Choose a genre, get our recomendations!</a
+        <div class="nav-wrapper blue dark 1">
+          <a href="#!" class="brand-logo"
+            >Choose a genre, get our recommendations!</a
           >
           <ul class="right hide-on-med-and-down">
             <!-- Dropdown Trigger -->
             <li>
               <a class="dropdown-trigger" href="#!" data-target="dropdown1"
-                >Dropdown<i class="material-icons right">arrow_drop_down</i></a
-              >
+                >Dropdown<i class="material-icons right"></i
+              ></a>
             </li>
           </ul>
         </div>
       </nav>
     </header>
 
-    <!-- Top Section ------- Movie Poster Links (Once Genre is picked, two movie posters appear to recommend) -->
+    <!-- Top Section ------- Movie Poster Links (Once Genre is picked, two movie posters appear to recommend) -->git
 
     <div class="container">
       <section class="movie-ticker">
-        <a href="#" class="genre-link">
-          <figure class="movie-poster">
-            <img src="assets/john-wick-4-poster.jpg" />
+        <a href="#" id="movie-1" class="movie-link">
+          <figure id="genre-1" class="movie-poster">
+            <img id="movie-poster-1" src="assets/john-wick-4-poster.jpg" />
             <figcaption class="caption">placeholder</figcaption>
           </figure>
         </a>
 
-        <a href="#" class="genre-link2">
-          <figure class="movie-poster2">
-            <img src="assets/the-mandalorian-season-3-poster.jpeg" />
+        <a href="#" id="movie-2" class="movie-link2">
+          <figure id="genre-2" class="movie-poster2">
+            <img
+              id="movie-poster-2"
+              src="assets/the-mandalorian-season-3-poster.jpeg"
+            />
             <figcaption class="caption">Placeholder</figcaption>
           </figure>
         </a>
 
-        <a href="#" class="genre-link3">
-          <figure class="movie-poster3">
-            <img src="assets/vinland-saga-season-2-poster.jpg" />
+        <a href="#" id="movie-3" class="movie-link3">
+          <figure id="genre-3" class="movie-poster3">
+            <img
+              id="movie-poster-3"
+              src="assets/vinland-saga-season-2-poster.jpg"
+            />
             <figcaption class="caption">
               "I don't hate him anymore, which is my problem, whithout my hate,
               I'm empty."-Thorfinn
@@ -149,13 +157,13 @@
     <footer></footer>
 
     <!-- jQuery cdn link -->
+
     <script
       src="https://code.jquery.com/jquery-3.6.4.min.js"
       integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
       crossorigin="anonymous"
     ></script>
-    <script src="js/geo.js"></script>
-    <script src="js/api.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>
