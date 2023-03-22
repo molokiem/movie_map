@@ -1,5 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
+<<<<<<< HEAD
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Movie Map</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- materialize cdn -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+</head>
+
+<body>
+
+  <!-- 
+    <button onclick="getLocation()">Test button if you guys want it</button>
+     -->
+  <p id="test"></p>
+
+  <script>
+    var x = document.getElementById("test");
+
+    function getLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition, showError);
+      } else {
+        x.innerHTML = "Movie Map is not supported by this browser.";
+      }
+    }
+
+    function showPosition(position) {
+      x.innerHTML = "Latitude: " + position.coords.latitude +
+        "<br>Longitude: " + position.coords.longitude;
+    }
+
+    function showError(error) {
+      switch (error.code) {
+        case error.PERMISSION_DENIED:
+          x.innerHTML = "User denied the request to see the location."
+          break;
+        case error.POSITION_UNAVAILABLE:
+          x.innerHTML = "Location information is unavailable."
+          break;
+        case error.TIMEOUT:
+          x.innerHTML = "The request for user location due totimed out."
+          break;
+        case error.UNKNOWN_ERROR:
+          x.innerHTML = "Unknown error occurred."
+          break;
+      }
+    }
+  </script>
+
+
+
+  <header>
+    <!-- Main Header -->
+    <h1>Movie Map</h1>
+    <h2>Bringing: "Focus, Commitment, And Sheer Will" -Viggo Tarasov On John Wick</h2>
+    <h3>To A Theater Near You</h3>
+    <!-- Dropdown Genre List -->
+    <ul id="dropdown1" class="dropdown-content">
+      <li><a href="#!">Action</a></li>
+      <li><a href="#!">Comedy</a></li>
+      <li><a href="#!">Drama</a></li>
+      <li><a href="#!">Horror</a></li>
+      <li><a href="#!">Fantasy</a></li>
+      <li><a href="#!">Sci-Fi</a></li>
+    </ul>
+    <!-- nav bar -->
+    <nav>
+      <div class="nav-wrapper blue darken-2">
+        <a href="#!" class="brand-logo left">Choose a genre, get our recomendations!</a>
+        <ul class="right hide-on-med-and-down">
+          <!-- Dropdown Trigger -->
+          <li>
+            <a class="dropdown-trigger" href="#!" data-target="dropdown1">Dropdown<i
+                class="material-icons right">arrow_drop_down</i></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Top Section ------- Movie Poster Links (Once Genre is picked, two movie posters appear to recommend) -->
+
+  <div class="container">
+    <section class="movie-ticker">
+
+      <a href="#" class="genre-link">
+        <figure class="movie-poster">
+          <img src="assets/john-wick-4-poster.jpg">
+          <figcaption class="caption">placeholder</figcaption>
+        </figure>
+      </a>
+
+      <a href="#" class="genre-link2">
+        <figure class="movie-poster2">
+          <img src="assets/the-mandalorian-season-3-poster.jpeg" />
+          <figcaption class="caption">Placeholder</figcaption>
+        </figure>
+      </a>
+
+      <a href="#" class="genre-link3">
+        <figure class="movie-poster3">
+          <img src="assets/vinland-saga-season-2-poster.jpg" />
+          <figcaption class="caption">"I don't hate him anymore, which is my problem, whithout my hate, I'm
+            empty."-Thorfinn</figcaption>
+        </figure>
+      </a>
+=======
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -138,24 +249,80 @@
         how to navigate the galaxy, that way you'll never be lost." -Din Djarin
       </p>
       <p>It's time to go grab your favorite snack! We're here to help.</p>
+>>>>>>> 17568ac3276bab5f322f4be647d09c8934a6d6b3
     </section>
+  </div>
 
-    <section class="find-store">
+
+
+  <section class="movie-facts"></section>
+
+  <!-- Bottom Section ------- Snack Map (Get user's location, List of Nearby Stores Appears) -->
+  <section class="snack-map">
+    <h2>SNACK MAP</h2>
+    <p>"Being a mandalorian isn't just about fighting, you also have to know how to navigate the galaxy, that way you'll
+      never be lost." -Din Djarin</p>
+    <p>It's time to go grab your favorite snack! We're here to help.</p>
+  </section>
+
+  <!-- <section class="find-store">
+      <button class="find-store-button">Find a Store Near Me</button> -->
+
+  <!-- Store List -->
+
+  <!-- Dropdown Trigger -->
+
+
+<!-- 
+  <div class="dropdown-container dropdown-solid">
+    <div class="dropdown-toggle hover-dropdown">
       <button class="find-store-button">Find a Store Near Me</button>
-
-      <!-- Store List -->
+    </div>
+    <div class="dropdown-menu">
       <ul>
+<<<<<<< HEAD
+        <li><a href="https://www.wawa.com/about/locations/store-locator">Wawa</a></li>
+        <li><a href="https://quickchek.com/locations-services-fuel/">Quick Check</a></li>
+        <li><a href="https://www.7-eleven.com/">7-Eleven</a></li>
+        <li><a href="https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwissPOY6e_9AhVe6-MHHcbrAjMYABAAGgJ5bQ&ohost=www.google.com&cid=CAESauD2WantABKdf16sshkqGfUXjbC99WPfGl9-ajnKlDbYwWXocyHUuF6pW_61dMc5eCTPVQRjRDPn_1amjH3Bu4VErwaZfeC7RNM4FyeBADUwtoeXoU4wW-gZKLIwnOr03cQypfJVcmPTE6E&sig=AOD64_3lr1yLiQjVwfHShOm1VQaz5XCRMg&q&adurl&ved=2ahUKEwihsuyY6e_9AhVbFFkFHdNbCRkQ0Qx6BAgGEAE">CVS</a></li>
+        <li><a href="https://www.walgreens.com/storelocator/find.jsp"><i class="material-icons">Walgreens</a></li>
+=======
         <li class="data">One</li>
         <li class="data">Two</li>
         <li class="data">Three</li>
         <li class="data">Four</li>
         <li class="data">Five</li>
+>>>>>>> 17568ac3276bab5f322f4be647d09c8934a6d6b3
       </ul>
-    </section>
+    </div>
+  </div>
+</div>
+</div>
 
-    <!-- FOOTER -->
-    <footer></footer>
+     Dropdown Structure 
+  <ul id='dropdown1' class='dropdown-content'>
 
+<<<<<<< HEAD
+  </ul>
+  </section>
+ -->
+
+
+
+
+
+
+  <!-- FOOTER -->
+  <footer></footer>
+
+  <!-- jQuery cdn link -->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+    integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
+=======
     <!-- jQuery cdn link -->
 
     <script
@@ -167,3 +334,4 @@
     <script src="js/script.js"></script>
   </body>
 </html>
+>>>>>>> 17568ac3276bab5f322f4be647d09c8934a6d6b3
