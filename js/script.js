@@ -22,21 +22,6 @@
 // var apiKey = "307f24d9af855edf4286e32464c76737";
 // var url = baseURL + "/weather?appid=" + apiKey;
 
-<<<<<<< HEAD
-navigator.geolocation.getCurrentPosition(function (locationData) {
-  console.log(locationData);
-  //made a request for the api to get current location of the user
-  $.get(
-    url +
-    "&lat=" +
-    locationData.coords.latitude +
-    "&lon=" +
-    locationData.coords.longitude
-  );
-  then(function (data) {
-    console.log(data);
-  });
-=======
 // navigator.geolocation.getCurrentPosition(function (locationData) {
 //   console.log(locationData);
 //   //made a request for the api to get current location of the user
@@ -52,10 +37,9 @@ navigator.geolocation.getCurrentPosition(function (locationData) {
 //   });
 // });
 
-$(document).ready(function(){
-  $('.modal').modal();
-  $('.dropdown-trigger').dropdown();
->>>>>>> 17568ac3276bab5f322f4be647d09c8934a6d6b3
+$(document).ready(function () {
+  $(".modal").modal();
+  $(".dropdown-trigger").dropdown();
 });
 
 // ES6 VERSION OF CALLING API DATA
