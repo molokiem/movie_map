@@ -27,10 +27,10 @@ navigator.geolocation.getCurrentPosition(function (locationData) {
   //made a request for the api to get current location of the user
   $.get(
     url +
-      "&lat=" +
-      locationData.coords.latitude +
-      "&lon=" +
-      locationData.coords.longitude
+    "&lat=" +
+    locationData.coords.latitude +
+    "&lon=" +
+    locationData.coords.longitude
   );
   then(function (data) {
     console.log(data);
