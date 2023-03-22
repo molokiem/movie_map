@@ -37,6 +37,11 @@ navigator.geolocation.getCurrentPosition(function (locationData) {
   });
 });
 
+$(document).ready(function(){
+  $('.modal').modal();
+  $('.dropdown-trigger').dropdown();
+});
+
 // ES6 VERSION OF CALLING API DATA
 
 // async function getData() {
