@@ -142,29 +142,39 @@
       </p>
       <p>It's time to go grab your favorite snack! We're here to help.</p>
     </section>
-  </div>
 
-
-  <!-- <section class="find-store">
+    <!-- <section class="find-store">
       <button class="find-store-button">Find a Store Near Me</button> -->
 
-  <!-- Store List -->
+    <!-- Store List -->
 
-  <section class="find-store">
+    <!-- Dropdown Trigger -->
+
+    <div class="search-wrap">
+      <input type="text" placeholder="Enter your zipcode" />
       <button class="find-store-button">Find a Store Near Me</button>
     </div>
-    <div class="dropdown-menu">
-      <ul>
-        <li class="data">One</li>
-        <li class="data">Two</li>
-        <li class="data">Three</li>
-        <li class="data">Four</li>
-        <li class="data">Five</li>
-      </ul>
-  </section>
- 
 
+    <div id="map"></div>
 
+    <script>
+      var map;
+      var infowindow;
+      function initMap() {
+        var montclair = new google.maps.LatLng(40.8259, -74.209);
+
+        infowindow = new google.maps.InfoWindow();
+
+        map = new google.maps.Map(document.getElementById("map"), {
+          center: montclair,
+          zoom: 15,
+        });
+      }
+    </script>
+    <script
+      async
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAYFYYWcrEYJI4VUPL-6u8A7tMz7Q07XaY&libraries=places&callback=initMap"
+    ></script>
     <script
       src="https://code.jquery.com/jquery-3.6.4.min.js"
       integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
@@ -172,6 +182,7 @@
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="js/geo.js"></script>
+    <script src="js/search.js"></script>
     <script src="js/api.js"></script>
     <script src="js/script.js"></script>
   </body>
