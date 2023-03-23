@@ -151,7 +151,7 @@
     <!-- Dropdown Trigger -->
 
     <div class="search-wrap">
-      <input type="text" placeholder="Enter your zipcode" />
+      <input id="search-input" type="text" placeholder="Enter your zipcode" />
       <button class="find-store-button">Find a Store Near Me</button>
     </div>
 
@@ -159,11 +159,8 @@
 
     <script>
       var map;
-      var infowindow;
       function initMap() {
         var montclair = new google.maps.LatLng(40.8259, -74.209);
-
-        infowindow = new google.maps.InfoWindow();
 
         map = new google.maps.Map(document.getElementById("map"), {
           center: montclair,
