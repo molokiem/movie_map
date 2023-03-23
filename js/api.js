@@ -1,52 +1,59 @@
-function getMovieBySearch(movie) {
+var dropdownLis = $("#dropdown1 li");
+// var liHorror = document.getElementById("#horror");
+var liComedy = document.getElementById("#comedy");
+var onlyDropdown = document.getElementById("#horror");
+
+var image1 = $("#movie-poster-1");
+var image2 = $("#movie-poster-2");
+var image3 = $("#movie-poster-3");
+
+//RETURNS ARRAY
+
+function getMovieBySearch(cat) {
   var baseURL = "http://omdbapi.com/";
   var myKey = "?apikey=trilogy&";
-  var query = `s=${movie}`;
-
+  var query = `s=${cat}`;
+  console.log(cat);
   fetch(baseURL + myKey + query)
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
-      return data.Search;
+      var movies = data.Search;
+      console.log(movies, image1);
+      image1.attr("src", movies[0].Poster);
+      image2.attr("src", movies[1].Poster);
+      image3.attr("src", movies[2].Poster);
     });
 }
 
-function renderSearch() {
-  var divEl = document.querySelector("li");
+// getMovieBySearch("action");
+// getMovieBySearch("horror");
+// getMovieBySearch("comedy");
+// getMovieBySearch("drama");
+// getMovieBySearch("fantasy");
+// getMovieBySearch("scifi");
+
+function showRandomGenre() {
+  var cat = $(this).text();
+  getMovieBySearch(cat);
 }
+dropdownLis.click(showRandomGenre);
 
-getMovieBySearch("action");
-getMovieBySearch("horror");
-getMovieBySearch("comedy");
-getMovieBySearch("drama");
-getMovieBySearch("fantasy");
-getMovieBySearch("scifi");
+// dropdownUl.forEach(function (li) {
+//   console.log("for each works");
 
-var dropdownUl = document.querySelectorAll("li");
-// var liHorror = document.getElementById("#horror");
-var liComedy = document.getElementById("#comedy");
-let onlyDropdown = document.getElementById("#horror");
-//RETURNS ARRAY
-console.log(dropdownUl);
-
-console.log(dropdownUl.length);
-
-dropdownUl.forEach(function (li) {
-  console.log("for each works");
-
-  li.addEventListener("click", function (e) {
-    if (li !== liHorror) {
-      return getMovieBySearch("horror");
-    } else {
-      console.log("wrong");
-      return "wrong";
-    }
-    // li.append(liHorror);
-    // getMovieBySearch("horror");
-    // li.append(liComedy);
-    // getMovieBySearch("comedy");
-  });
-});
+//   li.addEventListener("click", function (e) {
+//     if (li !== liHorror) {
+//       return getMovieBySearch("horror");
+//     } else {
+//       console.log("wrong");
+//       return "wrong";
+//     }
+//     // li.append(liHorror);
+//     // getMovieBySearch("horror");
+//     // li.append(liComedy);
+//     // getMovieBySearch("comedy");
+//   });
+// });
 
 // myButtons.forEach(function (btn) {
 //   btn.addEventListener("click", function (e) {
