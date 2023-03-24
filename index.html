@@ -57,12 +57,8 @@
 
     <header>
       <!-- Main Header -->
-      <h1>Movie Map</h1>
-      <h2>
-        Bringing: "Focus, Commitment, And Sheer Will" -Viggo Tarasov On John
-        Wick
-      </h2>
-      <h3>To A Theater Near You</h3>
+      <h1>Movie Companion</h1>
+      <h2>Going To A Theater Near You</h2>
       <!-- Dropdown Genre List -->
 
       <!-- Dropdown Structure -->
@@ -71,17 +67,21 @@
       </select> -->
       <ul id="dropdown1" class="dropdown-content">
         <li id="horror"><a href="#!">Horror</a></li>
+        <li class="divider"></li>
         <li id="action"><a href="#!">Action</a></li>
+        <li class="divider"></li>
         <li id="comedy"><a href="#!">Comedy</a></li>
         <li class="divider"></li>
         <li id="fantasy"><a href="#!">Fantasy</a></li>
+        <li class="divider"></li>
         <li id="drama"><a href="#!">Drama</a></li>
+        <li class="divider"></li>
         <li id="scifi"><a href="#!">Sci-Fi</a></li>
       </ul>
       <nav>
-        <div class="nav-wrapper blue dark 1">
-          <a href="#!" class="brand-logo"
-            >Choose a genre, get our recommendations!</a
+        <div class="nav-wrapper blue dark 1 ">
+          <a href="#!" class="brand-logo center"
+            >Choose A Genre Then Get Our Recommendations!</a
           >
           <ul class="right hide-on-med-and-down">
             <!-- Dropdown Trigger -->
@@ -101,46 +101,31 @@
       <section class="movie-ticker">
         <a href="#" id="movie-1" class="movie-link">
           <figure id="genre-1" class="movie-poster">
-            <img id="movie-poster-1" src="assets/john-wick-4-poster.jpg" />
-            <figcaption class="caption">placeholder</figcaption>
+            <img id="movie-poster-1" src="assets/poster placeholder.png"/>
           </figure>
         </a>
 
         <a href="#" id="movie-2" class="movie-link2">
-          <figure id="genre-2" class="movie-poster2">
+          <figure id="genre-2" class="movie-poster">
             <img
-              id="movie-poster-2"
-              src="assets/the-mandalorian-season-3-poster.jpeg"
-            />
-            <figcaption class="caption">Placeholder</figcaption>
+              id="movie-poster-2"src="assets/poster placeholder.png"/>
           </figure>
         </a>
 
         <a href="#" id="movie-3" class="movie-link3">
-          <figure id="genre-3" class="movie-poster3">
+          <figure id="genre-3" class="movie-poster">
             <img
-              id="movie-poster-3"
-              src="assets/vinland-saga-season-2-poster.jpg"
-            />
-            <figcaption class="caption">
-              "I don't hate him anymore, which is my problem, whithout my hate,
-              I'm empty."-Thorfinn
+              id="movie-poster-3"src="assets/poster placeholder.png"/>
             </figcaption>
           </figure>
         </a>
       </section>
     </div>
 
-    <section class="movie-facts"></section>
-
     <!-- Bottom Section ------- Snack Map (Get user's location, List of Nearby Stores Appears) -->
     <section class="snack-map">
-      <h2>SNACK MAP</h2>
-      <p>
-        "Being a mandalorian isn't just about fighting, you also have to know
-        how to navigate the galaxy, that way you'll never be lost." -Din Djarin
-      </p>
-      <p>It's time to go grab your favorite snack! We're here to help.</p>
+      <h1>SNACK MAP</h1>
+      <h2>It's time to go grab your favorite snack! We're here to help!</h2>
     </section>
 
     <!-- <section class="find-store">
@@ -149,13 +134,15 @@
     <!-- Store List -->
 
     <!-- Dropdown Trigger -->
-
-    <div class="search-wrap">
-      <input id="search-input" type="text" placeholder="Enter your zipcode" />
-      <button class="find-store-button">Find a Store Near Me</button>
+    <!-- added row styles so that they stack top to bottom -->
+    <div class="search-wrap"> 
+      <h1><input id="search-input" type="text" placeholder="Enter Your Zipcode" /></h1>
+      <button class="find-store-button"> Find A Store Near Me </button>
+      <section class="map-section">
+        <div id="map" ></div>
+      </section>
     </div>
 
-    <div id="map"></div>
 
     <script>
       var map;
