@@ -37,10 +37,6 @@
 //   });
 // });
 
-// $(document).ready(function () {
-//   $(".modal").modal();
-//   $(".dropdown-trigger").dropdown();
-// });
 
 // ES6 VERSION OF CALLING API DATA
 
@@ -117,3 +113,11 @@
 // newDiv.innerHTML(`<li> word </li>`);
 
 // renderMovieData();
+
+// Please don't comment out this ection of code!
+// It's init code for the dropdown menu!
+
+$(document).ready(function () {
+  $(".modal").modal();
+  $(".dropdown-trigger").dropdown();
+});
