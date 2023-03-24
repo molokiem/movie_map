@@ -75,5 +75,6 @@ function getMovieBySearch(cat) {
 function showRandomGenre() {
   var cat = $(this).text();
   getMovieBySearch(cat);
+  
 }
 dropdownLis.click(showRandomGenre);
